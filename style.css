@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #efe8de;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.calculator {
+  align-items: flex-end;
+  background-color: #17181a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  padding: 20px;
+}
+
+.screen,
+.buttons-container {
+  max-width: 300px;
+}
+
+#operationScreen {
+  align-items: flex-end;
+  display: flex;
+  height: 30px;
+  justify-content: flex-end;
+  margin: 30px 5px 0 0;
+}
+
+#operation {
+  color: #828282;
+}
+
+#resultScreen {
+  margin: 30px 5px;
+}
+
+#result {
+  color: #d4d4d2;
+  font-size: 48px;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.button {
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  height: 62px;
+  margin: 5px;
+  width: 62px;
+}
+
+.light-gray-button {
+  background-color: #d4d4d2;
+  color: #1c1c1c;
+}
+
+.orange-button {
+  background-color: #ff9500;
+  color: #d4d4d2;
+}
+
+.number,
+#comaButton {
+  background-color: #505050;
+  color: #d4d4d2;
+}
+
+#ceroNumber {
+  border-radius: 30px;
+  grid-area: 5 / 1 / 6 / 3;
+  width: 135px;
+}
