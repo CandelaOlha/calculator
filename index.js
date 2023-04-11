@@ -34,10 +34,10 @@ equalButton.addEventListener("click", displayResult);
 // Reset result
 
 const resetResult = () => {
-    operationNumbers = [];
-    result = 0;
-    operationText.textContent = "";
-    resultText.textContent = "0";
-}
+  operationNumbers = [];
+  result = 0;
+  operationText.textContent = "";
+  resultText.textContent = "0";
+};
 
 allClearButton.addEventListener("click", resetResult);
