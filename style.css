@@ -58,7 +58,8 @@ body {
 }
 
 .button,
-#equalButton {
+#equalButton,
+#allClearButton {
   border: none;
   border-radius: 100%;
   cursor: pointer;

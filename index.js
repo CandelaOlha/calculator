@@ -3,6 +3,7 @@ let result = 0;
 const operationText = document.querySelector("#operationText");
 const resultText = document.querySelector("#resultText");
 const equalButton = document.querySelector("#equalButton");
+const allClearButton = document.querySelector("#allClearButton");
 
 // Display operation
 
@@ -22,8 +23,21 @@ displayOperation();
 // Display result
 
 const displayResult = () => {
-  result = eval(operationNumbers.join(""));
-  resultText.textContent = result.toString();
+  if (operationNumbers.length !== 0) {
+    result = eval(operationNumbers.join(""));
+    resultText.textContent = result.toString();
+  }
 };
 
 equalButton.addEventListener("click", displayResult);
+
+// Reset result
+
+const resetResult = () => {
+    operationNumbers = [];
+    result = 0;
+    operationText.textContent = "";
+    resultText.textContent = "0";
+}
+
+allClearButton.addEventListener("click", resetResult);
