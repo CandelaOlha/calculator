@@ -4,6 +4,8 @@ const operationText = document.querySelector("#operationText");
 const resultText = document.querySelector("#resultText");
 const equalButton = document.querySelector("#equalButton");
 
+// Display operation
+
 const displayOperation = () => {
   const buttons = document.querySelectorAll(".button");
 
@@ -16,6 +18,8 @@ const displayOperation = () => {
 };
 
 displayOperation();
+
+// Display result
 
 const displayResult = () => {
   result = eval(operationNumbers.join(""));
