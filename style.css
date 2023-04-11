@@ -57,7 +57,8 @@ body {
   grid-row-gap: 5px;
 }
 
-.button {
+.button,
+#equalButton {
   border: none;
   border-radius: 100%;
   cursor: pointer;
