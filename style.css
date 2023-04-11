@@ -36,7 +36,7 @@ body {
   margin: 30px 5px 0 0;
 }
 
-#operation {
+#operationText {
   color: #828282;
 }
 
@@ -44,7 +44,7 @@ body {
   margin: 30px 5px;
 }
 
-#result {
+#resultText {
   color: #d4d4d2;
   font-size: 48px;
 }
