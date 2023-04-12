@@ -61,12 +61,15 @@ allClearButton.addEventListener("click", resetResult);
 // Make number positive or negative
 
 const makeNumberPositiveOrNegative = () => {
-  if (result < 0) {
-    result = Math.abs(result); // Make number positive
-  } else if (result > 0) {
-    result = result / -1; // Make number negative
+  if (operationNumbers.length !== 0) {
+    if (operationNumbers[0] === "-") {
+      operationNumbers.shift();
+      operationText.textContent = operationNumbers;
+    } else if (Number(operationNumbers[0]) >= 0) {
+      operationNumbers.unshift("-");
+      operationText.textContent = operationNumbers.join("");
+    }
   }
-  resultText.textContent = result;
 };
 
 positiveOrNegativeButton.addEventListener(
