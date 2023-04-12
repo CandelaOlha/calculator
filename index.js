@@ -12,14 +12,7 @@ const displayOperation = () => {
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = () => {
-      if (buttons[i].innerText === "×") {
-        operationNumbers.push("*");
-      } else if (buttons[i].innerText === "÷") {
-        operationNumbers.push("/");
-      } else {
-        operationNumbers.push(buttons[i].innerText);
-      }
-
+      operationNumbers.push(buttons[i].innerText);
       operationText.textContent = operationNumbers.join("");
     };
   }
@@ -27,10 +20,23 @@ const displayOperation = () => {
 
 displayOperation();
 
+// Replace arithmetic operators
+
+const replaceArithmeticOperators = () => {
+  for (let i = 0; i < operationNumbers.length; i++) {
+    if (operationNumbers[i] === "×") {
+      operationNumbers[i] = "*";
+    } else if (operationNumbers[i] === "÷") {
+      operationNumbers[i] = "/";
+    }
+  }
+};
+
 // Display result
 
 const displayResult = () => {
   if (operationNumbers.length !== 0) {
+    replaceArithmeticOperators();
     result = eval(operationNumbers.join(""));
     resultText.textContent = result.toString();
   }
