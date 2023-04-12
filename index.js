@@ -12,7 +12,14 @@ const displayOperation = () => {
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].onclick = () => {
-      operationNumbers.push(buttons[i].innerText);
+      if (buttons[i].innerText === "×") {
+        operationNumbers.push("*");
+      } else if (buttons[i].innerText === "÷") {
+        operationNumbers.push("/");
+      } else {
+        operationNumbers.push(buttons[i].innerText);
+      }
+
       operationText.textContent = operationNumbers.join("");
     };
   }
