@@ -4,6 +4,9 @@ const operationText = document.querySelector("#operationText");
 const resultText = document.querySelector("#resultText");
 const equalButton = document.querySelector("#equalButton");
 const allClearButton = document.querySelector("#allClearButton");
+const positiveOrNegativeButton = document.querySelector(
+  "#positiveOrNegativeButton"
+);
 
 // Display operation
 
@@ -54,3 +57,19 @@ const resetResult = () => {
 };
 
 allClearButton.addEventListener("click", resetResult);
+
+// Make number positive or negative
+
+const makeNumberPositiveOrNegative = () => {
+  if (result < 0) {
+    result = Math.abs(result); // Make number positive
+  } else if (result > 0) {
+    result = result / -1; // Make number negative
+  }
+  resultText.textContent = result;
+};
+
+positiveOrNegativeButton.addEventListener(
+  "click",
+  makeNumberPositiveOrNegative
+);

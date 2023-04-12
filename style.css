@@ -59,7 +59,8 @@ body {
 
 .button,
 #equalButton,
-#allClearButton {
+#allClearButton,
+#positiveOrNegativeButton {
   border: none;
   border-radius: 100%;
   cursor: pointer;
