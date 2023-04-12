@@ -64,7 +64,7 @@ const makeNumberPositiveOrNegative = () => {
   if (operationNumbers.length !== 0) {
     if (operationNumbers[0] === "-") {
       operationNumbers.shift();
-      operationText.textContent = operationNumbers;
+      operationText.textContent = operationNumbers.join("");
     } else if (Number(operationNumbers[0]) >= 0) {
       operationNumbers.unshift("-");
       operationText.textContent = operationNumbers.join("");
