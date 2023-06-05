@@ -51,6 +51,7 @@ body {
 #resultText {
   color: #d4d4d2;
   font-size: 48px;
+  overflow: scroll;
 }
 
 .buttons-container {

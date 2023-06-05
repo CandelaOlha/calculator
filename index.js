@@ -7,6 +7,7 @@ const allClearButton = document.querySelector("#allClearButton");
 const positiveOrNegativeButton = document.querySelector(
   "#positiveOrNegativeButton"
 );
+const percentageButton = document.querySelector("#percentageButton");
 
 // Display operation
 
@@ -76,3 +77,12 @@ positiveOrNegativeButton.addEventListener(
   "click",
   makeNumberPositiveOrNegative
 );
+
+// Use percentage button
+
+const calculatePercentage = () => {
+  console.log("Percentage button was clicked!");
+  console.log(operationNumbers);
+}
+
+percentageButton.addEventListener("click", calculatePercentage);
